@@ -1052,15 +1052,15 @@ var soulbreakers_f_slap = function(channel, sound) {
   .then(response => {
     if (response === '1') {
       // elevator
-      soulbreakers_f_elevator_cucked(channel, sound);
+      soulbreakers_f_elevator_bad(channel, sound);
     }
     if (response === '2') {
       // execute
-      soulbreakers_f_execute_cucked(channel, sound);
+      soulbreakers_f_execute_bad(channel, sound);
     }
     if (response === '3') {
       // accept surrender
-      soulbreakers_f_surrender_cucked(channel, sound);
+      soulbreakers_f_surrender_bad(channel, sound);
     }
   }).catch(err => console.log(err));
 };
@@ -1089,7 +1089,7 @@ var soulbreakers_f_elevator = function(channel, sound) {
   sendContent_baron('unguardedfamily2_elevator', channel, sound);
   createCollector_baron(channel, gngb.unguardedfamily3choice, "Do you dare peek through it?", 1, 30)
   .then(response => {
-      sendContent_baron('unguardedfamily3_uncucked', channel, sound);
+      sendContent_baron('unguardedfamily3_unbad', channel, sound);
       sendContent_baron('credits', channel, sound);
   }).catch(err => console.log(err));
 };
@@ -1098,7 +1098,7 @@ var soulbreakers_f_execute = function(channel, sound) {
   sendContent_baron('unguardedfamily2_executehim', channel, sound);
   createCollector_baron(channel, gngb.unguardedfamily3choice, "Do you dare peek through it?", 1, 30)
   .then(response => {
-      sendContent_baron('unguardedfamily3_uncucked', channel, sound);
+      sendContent_baron('unguardedfamily3_unbad', channel, sound);
       sendContent_baron('credits', channel, sound);
 
   }).catch(err => console.log(err));
@@ -1108,39 +1108,39 @@ var soulbreakers_f_surrender = function(channel, sound) {
   sendContent_baron('unguardedfamily2_surrender', channel, sound);
   createCollector_baron(channel, gngb.unguardedfamily3choice, "Do you dare peek through it?", 1, 30)
   .then(response => {
-      sendContent_baron('unguardedfamily3_uncucked', channel, sound);
+      sendContent_baron('unguardedfamily3_unbad', channel, sound);
       sendContent_baron('credits', channel, sound);
 
   })
 };
 
-var soulbreakers_f_elevator_cucked = function(channel, sound) {
+var soulbreakers_f_elevator_bad = function(channel, sound) {
   sendContent_baron('unguardedfamily2_elevator', channel, sound);
   createCollector_baron(channel, gngb.unguardedfamily3choice, "Do you dare peek through it?", 1, 30)
   .then(response => {
-      soulbreakers_f_cucked(channel, sound);
+      soulbreakers_f_bad(channel, sound);
 
   }).catch(err => console.log(err));
 };
 
-var soulbreakers_f_execute_cucked = function(channel, sound) {
+var soulbreakers_f_execute_bad = function(channel, sound) {
   sendContent_baron('unguardedfamily2_executehim', channel, sound);
   createCollector_baron(channel, gngb.unguardedfamily3choice, "Do you dare peek through it?", 1, 30)
   .then(response => {
-      soulbreakers_f_cucked(channel, sound);
+      soulbreakers_f_bad(channel, sound);
   }).catch(err => console.log(err));
 };
 
-var soulbreakers_f_surrender_cucked = function(channel, sound) {
+var soulbreakers_f_surrender_bad = function(channel, sound) {
   sendContent_baron('unguardedfamily2_surrender', channel, sound);
   createCollector_baron(channel, gngb.unguardedfamily3choice, "Do you dare peek through it?", 1, 30)
   .then(response => {
-      soulbreakers_f_cucked(channel, sound);
+      soulbreakers_f_bad(channel, sound);
   })
 };
 
-var soulbreakers_f_cucked = function(channel, sound) {
-  sendContent_baron('unguardedfamily3_cucked', channel, sound);
+var soulbreakers_f_bad = function(channel, sound) {
+  sendContent_baron('unguardedfamily3_bad', channel, sound);
   createCollector_baron(channel, gngb.unguardedfamily4choice, "“Is there anything else you require of me? You know I live to serve you, my Lord.”", 2, 30)
   .then(response => {
     if (response === '1') {
